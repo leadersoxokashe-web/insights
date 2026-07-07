@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+body  {
+    height: 100vh;
+    color: white
+}
+
+.card {
+    background-color: hsl(233, 47%, 7%);
+    height: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.card-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 37%, 61%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+
+.people-working {
+    height: 100%;
+    width: 100%;
+}
+
+.insights {
+    padding: 32px;
+    height: calc(100vh - 300px);
+    overflow: hidden;
+}
+
+.insights-text {
+    color: hsl(277, 36%, 38%);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.insights-info {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.stats {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+@media(min-width: 767px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+        background-color: black;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 800px;
+        max-height: 350px;
+        border-radius: 10px;
+        background-color: hsl(244, 37%, 16%);
+    }
+
+    .insights {
+        padding: 32px;
+        height: 350px;
+        flex: 1;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+
+    .stats {
+        height: auto;
+    }
+
+    .people-working {
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .card-img {
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        flex: 1.2;
+    }
+
+    .card-img::after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+     .stats {
+        display: flex;
+        gap: 70px;
+    }
+
+    .stats h2{
+        color: white;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+
+
+    }
+
+    .stats span{
+        color: hsla(0, 0%, 100%, 0.6);
+        font-size: .8rem;
+
+    }
+
+    }
